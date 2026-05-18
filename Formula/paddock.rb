@@ -5,21 +5,21 @@
 class Paddock < Formula
   desc "Multi-Claude Code account manager. Auto-switch per directory."
   homepage "https://github.com/ojuan19/paddock"
-  version "0.1.0"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ojuan19/paddock/releases/download/v0.1.0/paddock_Darwin_amd64.tar.gz"
-      sha256 "f7879089d890abaf00c98e52dcfae56bfa46f24dd70d164e8eed8931893035e4"
+      url "https://github.com/ojuan19/paddock/releases/download/v0.1.2/paddock_Darwin_amd64.tar.gz"
+      sha256 "fb0657fa5c9b4c2b026d6be0dbb1872f6bd0aded64d867c7113a38bac8227e80"
 
       define_method(:install) do
         bin.install "paddock"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ojuan19/paddock/releases/download/v0.1.0/paddock_Darwin_arm64.tar.gz"
-      sha256 "c498286d4c35a9a940a7f8f4427db55a5245ef4ecb1a6ecd1759d95630c1d0e2"
+      url "https://github.com/ojuan19/paddock/releases/download/v0.1.2/paddock_Darwin_arm64.tar.gz"
+      sha256 "bfd1a78b1b56a88d4ef96f27768f840ef92e4651990f9c22958dfd759729ea9f"
 
       define_method(:install) do
         bin.install "paddock"
@@ -29,15 +29,15 @@ class Paddock < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ojuan19/paddock/releases/download/v0.1.0/paddock_Linux_amd64.tar.gz"
-      sha256 "970ef629ea606627a00d1dcf07f3414b551df8f7a9e350d474080a8201cc1a71"
+      url "https://github.com/ojuan19/paddock/releases/download/v0.1.2/paddock_Linux_amd64.tar.gz"
+      sha256 "d73106e3879237baa3d97879eda10fc105a66a0f20450f6c9d8c8e9de5f6e7f0"
       define_method(:install) do
         bin.install "paddock"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ojuan19/paddock/releases/download/v0.1.0/paddock_Linux_arm64.tar.gz"
-      sha256 "ac6b6490a0639a15984206ba827ffb1771c8c7d44267b4ad9e9077389fced14f"
+      url "https://github.com/ojuan19/paddock/releases/download/v0.1.2/paddock_Linux_arm64.tar.gz"
+      sha256 "3f7697f01d9e703677cdbaf13f65fa5e89bf30be1df433843aac5174cebb0342"
       define_method(:install) do
         bin.install "paddock"
       end
